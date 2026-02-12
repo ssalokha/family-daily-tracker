@@ -1,0 +1,54 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C7E5A5B-8E5F-4E5F-8E5F-8E5F8E5F8E5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9D8F6B6C-9F6G-5F6G-9F6G-9F6G9F6G9F6G}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTracker.Domain", "src\FamilyTracker.Domain\FamilyTracker.Domain.csproj", "{A1234567-B123-C123-D123-E12345678901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTracker.Application", "src\FamilyTracker.Application\FamilyTracker.Application.csproj", "{A1234567-B123-C123-D123-E12345678902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTracker.Infrastructure", "src\FamilyTracker.Infrastructure\FamilyTracker.Infrastructure.csproj", "{A1234567-B123-C123-D123-E12345678903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTracker.API", "src\FamilyTracker.API\FamilyTracker.API.csproj", "{A1234567-B123-C123-D123-E12345678904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTracker.UnitTests", "tests\FamilyTracker.UnitTests\FamilyTracker.UnitTests.csproj", "{A1234567-B123-C123-D123-E12345678905}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1234567-B123-C123-D123-E12345678901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1234567-B123-C123-D123-E12345678905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1234567-B123-C123-D123-E12345678905}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1234567-B123-C123-D123-E12345678901} = {8C7E5A5B-8E5F-4E5F-8E5F-8E5F8E5F8E5F}
+		{A1234567-B123-C123-D123-E12345678902} = {8C7E5A5B-8E5F-4E5F-8E5F-8E5F8E5F8E5F}
+		{A1234567-B123-C123-D123-E12345678903} = {8C7E5A5B-8E5F-4E5F-8E5F-8E5F8E5F8E5F}
+		{A1234567-B123-C123-D123-E12345678904} = {8C7E5A5B-8E5F-4E5F-8E5F-8E5F8E5F8E5F}
+		{A1234567-B123-C123-D123-E12345678905} = {9D8F6B6C-9F6G-5F6G-9F6G-9F6G9F6G9F6G}
+	EndGlobalSection
+EndGlobal
