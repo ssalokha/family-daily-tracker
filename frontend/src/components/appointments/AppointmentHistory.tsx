@@ -28,7 +28,7 @@ const AppointmentHistory: React.FC = () => {
   });
 
   useEffect(() => {
-    if (user && user.userRole.includes('AdminUser')) {
+    if (user && user.role.includes('AdminUser')) {
       loadUsers();
       loadHistory();
     }
@@ -77,7 +77,7 @@ const AppointmentHistory: React.FC = () => {
     setTimeout(() => loadHistory(), 100);
   };
 
-  if (!user || !user.userRole.includes('AdminUser')) {
+  if (!user || !user.role.includes('AdminUser')) {
     return (
       <div className="p-6 bg-white rounded-lg shadow">
         <p className="text-gray-600">Access denied. Admin privileges required.</p>

@@ -34,4 +34,5 @@ const uiSlice = createSlice({
 });
 
 export const { setActiveTab, setCarouselPlaying, updateInteraction, resumeCarousel } = uiSlice.actions;
+export type { UIState };
 export default uiSlice.reducer;

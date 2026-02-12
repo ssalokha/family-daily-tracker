@@ -11,19 +11,26 @@ afterEach(() => {
 });
 
 // Mock localStorage
-const localStorageMock = {
-  getItem: vi.fn((key: string) => {
+const localStorageMock: Storage & { store: Record<string, string> } = {
+  getItem: vi.fn((key: string): string | null => {
     return localStorageMock.store[key] || null;
   }),
-  setItem: vi.fn((key: string, value: string) => {
+  setItem: vi.fn((key: string, value: string): void => {
     localStorageMock.store[key] = value;
   }),
-  removeItem: vi.fn((key: string) => {
+  removeItem: vi.fn((key: string): void => {
     delete localStorageMock.store[key];
   }),
-  clear: vi.fn(() => {
+  clear: vi.fn((): void => {
     localStorageMock.store = {};
   }),
+  key: vi.fn((index: number): string | null => {
+    const keys = Object.keys(localStorageMock.store);
+    return keys[index] || null;
+  }),
+  get length(): number {
+    return Object.keys(localStorageMock.store).length;
+  },
   store: {} as Record<string, string>,
 };
 

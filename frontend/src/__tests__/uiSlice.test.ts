@@ -1,9 +1,13 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { configureStore } from '@reduxjs/toolkit';
-import uiReducer, { setActiveTab, updateInteraction, resumeCarousel } from '../store/slices/uiSlice';
+import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
+import uiReducer, { setActiveTab, updateInteraction, resumeCarousel, UIState } from '../store/slices/uiSlice';
+
+interface RootState {
+  ui: UIState;
+}
 
 describe('uiSlice', () => {
-  let store: ReturnType<typeof configureStore>;
+  let store: EnhancedStore<RootState>;
 
   beforeEach(() => {
     store = configureStore({
