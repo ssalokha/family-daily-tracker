@@ -15,28 +15,40 @@ if ! command -v docker-compose &> /dev/null; then
     exit 1
 fi
 
-echo "📦 Building and starting containers..."
-docker-compose up --build -d
+echo "📦 Starting containers..."
+docker-compose up -d
+
+if [ $? -ne 0 ]; then
+    echo "❌ Error: Failed to start containers. Run 'docker-compose logs' to see details."
+    exit 1
+fi
 
 echo "⏳ Waiting for services to be ready..."
-sleep 10
+sleep 15
 
 # Check if services are running
 if docker-compose ps | grep -q "Up"; then
-    echo "✅ Services are up and running!"
+    echo ""
+    echo "==================================================="
+    echo "   ✅ Family Daily Tracker - Ready!"
+    echo "==================================================="
     echo ""
     echo "📍 Application URLs:"
     echo "   Frontend: http://localhost:3000"
     echo "   Backend API: http://localhost:5000"
-    echo "   API Documentation: http://localhost:5000/swagger"
     echo "   Database: localhost:5432"
     echo ""
-    echo "👤 Default Admin User:"
-    echo "   Username: Sergey"
-    echo "   Password: 210686"
+    echo "👤 Default Users (all passwords: 111111):"
+    echo "   Admin: Sergey"
+    echo "   Users: Natallia, Dasha, Alex, Home"
     echo ""
-    echo "💡 To view logs: docker-compose logs -f"
-    echo "🛑 To stop: docker-compose down"
+    echo "💡 Useful commands:"
+    echo "   View logs:        docker-compose logs -f"
+    echo "   Stop services:    docker-compose down"
+    echo "   Rebuild (if needed): docker-compose up --build -d"
+    echo ""
+    echo "==================================================="
+    echo ""
 else
     echo "❌ Error: Services failed to start properly"
     echo "Run 'docker-compose logs' to see the error details"
