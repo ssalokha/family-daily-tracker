@@ -16,6 +16,163 @@ A full-stack family management application for tracking weather, doctor appointm
 
 See [PROJECT_COMPLETION_SUMMARY.md](PROJECT_COMPLETION_SUMMARY.md) for detailed status.
 
+---
+
+## 📸 Application Screenshots
+
+### 🔐 Login Page
+The application uses JWT authentication with role-based access control.
+
+![Login Page](docs/screenshots/login.png)
+*Login page with username and password authentication. Default users: Sergey, Natallia, Dasha, Alex, Home (password: 111111)*
+
+---
+
+### 🌤️ Weather Tab - 7-Day Forecast
+Real-time weather data for Poznan, Poland from Open-Meteo API.
+
+![Weather Tab](docs/screenshots/weather-tab.png)
+*7-day weather forecast showing daily temperature ranges (min/max), weather conditions, and visual indicators*
+
+**Features:**
+- Real-time weather data integration
+- Daily min/max temperatures
+- Weather condition descriptions
+- Responsive grid layout (3 columns on tablet, 2 on mobile)
+- Auto-updates every hour
+
+---
+
+### 📅 Doctor Appointments Tab
+Manage medical appointments for all family members.
+
+![Appointments Tab](docs/screenshots/appointments-tab.png)
+*Appointments list showing upcoming doctor visits for the next 2 weeks*
+
+![Appointment Form](docs/screenshots/appointment-form.png)
+*Create/Edit appointment form with user selection, date/time pickers, and location details*
+
+**Features:**
+- View upcoming appointments (next 2 weeks)
+- Display format: "Doc: [UserName]" with date/time (24h format) and location
+- Create new appointments for any family member
+- Edit existing appointments
+- Delete appointments
+- Mark appointments as completed
+- Separate date and time pickers for better UX
+- UTC/local timezone handling
+
+---
+
+### 🛒 Shopping List Tab
+Collaborative shopping list for the entire family.
+
+![Shopping Tab](docs/screenshots/shopping-tab.png)
+*Shopping list with items, quantities, and management controls*
+
+![Send Email Modal](docs/screenshots/shopping-email-modal.png)
+*"Go Shop" feature - select a user to send the shopping list via email*
+
+**Features:**
+- Add new items with quantities
+- Edit item name and quantity
+- Delete individual items
+- "Clear All" button to empty the entire list
+- "Go Shop" - send shopping list to selected user via email
+- Optimistic UI updates for smooth experience
+- Created by tracking for each item
+
+---
+
+### 👥 Admin User Management (AdminUser only)
+User administration panel for managing family members.
+
+![Admin Tab](docs/screenshots/admin-tab.png)
+*Admin panel showing all users with their details and management options*
+
+![User Form](docs/screenshots/user-form.png)
+*Create/Edit user form with role assignment*
+
+**Features (AdminUser role only):**
+- View all users in a table
+- Display: Username, Email, Birthday, Age (calculated), Role
+- Add new users with role assignment
+- Edit user details
+- Delete users with confirmation
+- Role management (User, TabletUser, AdminUser)
+- Password hashing with BCrypt
+
+---
+
+### 🎠 Auto-Rotating Tab Carousel
+The application features an innovative carousel system for tablet display.
+
+**Carousel Behavior:**
+- ⏱️ Auto-rotates between tabs every 10 seconds
+- 👆 Stops rotation on user interaction (touch/click)
+- ⏰ Resumes rotation after 30 seconds of inactivity
+- 📍 Visual indicators show current tab
+- 🎨 Smooth transitions between tabs
+- 📱 Optimized for tablet (10") and mobile (5-7") displays
+
+---
+
+### 🎨 Responsive Design Examples
+
+**Tablet View (10 inches):**
+- Weather: 3-column grid layout
+- Appointments: List view with all details visible
+- Shopping: Full-width list with inline controls
+- Admin: Table view with all columns
+
+**Mobile View (5-7 inches):**
+- Weather: 2-column grid layout
+- Appointments: Compact list view
+- Shopping: Stacked item layout
+- Admin: Responsive table with horizontal scroll
+
+---
+
+## 📝 Adding Screenshots Guide
+
+To add actual screenshots to this README:
+
+1. **Take Screenshots:**
+   ```bash
+   # Start the application
+   ./start.sh
+   
+   # Access at http://localhost:3000
+   # Login with: Sergey / 111111
+   # Take screenshots of each tab
+   ```
+
+2. **Create Screenshots Directory:**
+   ```bash
+   mkdir -p docs/screenshots
+   ```
+
+3. **Save Screenshots:**
+   - `login.png` - Login page
+   - `weather-tab.png` - Weather forecast view
+   - `appointments-tab.png` - Appointments list
+   - `appointment-form.png` - Create/Edit appointment modal
+   - `shopping-tab.png` - Shopping list view
+   - `shopping-email-modal.png` - Send email dialog
+   - `admin-tab.png` - User management (AdminUser only)
+   - `user-form.png` - Create/Edit user form
+   - `tablet-view.png` - Tablet responsive design
+   - `mobile-view.png` - Mobile responsive design
+
+4. **Commit and Push:**
+   ```bash
+   git add docs/screenshots/
+   git commit -m "Add application screenshots"
+   git push
+   ```
+
+---
+
 ## Features
 1. It should have a user-friendly design:
    - for 10-inch tablet that will be for all users in common hall
